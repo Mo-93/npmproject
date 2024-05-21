@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div id="city-list"></div>
+    <a href="#" id="prev-link">Terug</a>
+    <a href="#" id="next-link">Verder</a>
+    <script src="main.js"></script>
+    
+</body>
+</html>
+
+
+
+
+
+<!-- Maak een nieuwe tabel --->
+CREATE TABLE Medewerkers (
+    ID INT PRIMARY KEY,
+    Naam VARCHAR(50),
+    Functie VARCHAR(50),
+    Salaris DECIMAL(10, 2)
+);
+
+
+<!-- Voeg een record toe aan de tabel-->
+INSERT INTO Medewerkers (ID, Naam, Functie, Salaris)
+VALUES (1, 'Jan Janssen', 'Manager', 5500.00);
+
+
+
+
+
+
+<!-- Selecteer alle records uit de tabel Medewerkers--->
+SELECT * FROM Medewerkers;
+
+
+
+
+<!-- Werk het salaris van de medewerker met ID 1 bij-->
+UPDATE Medewerkers
+SET Salaris = 6000.00
+WHERE ID = 1;
+
+
+
+
+<!-- Verwijder de medewerker met ID 1--->
+DELETE FROM Medewerkers
+WHERE ID = 1;
